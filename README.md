@@ -5,6 +5,17 @@
 Here we will be crating azure logic application with http trigger which gets blobs from storage account and add it as attachment in email and send it to recipients.
 We can integrate Logic app directly when bob is added into storage account also. But in this article we are using HTTP trigger so that Logic app can be invoked through http request and pass other parameters also required to be send in email along with attachment. 
 
+Below parametrs we are using 
+
+Description - any description
+From - any sample user name
+Name - user name
+RootFolderPath - This should be in format containername/directory name
+Title - title
+To - for whom you want to send email
+Type - request type
+isFilesAttached - true or false. 
+
 Lets see how we can start.
 
 Go to Azure Logic App > click on create > select subscription > select RG > Provide Logic App Name > LASendsEmail > select Region > Next Tags > Review and Create
@@ -131,6 +142,9 @@ Now click on When http recieved request is recieved and copy HTTP POST URL and p
     "isFilesAttached" : "true"
 }
 ~~~
+
+In the above logic app we have added condition true or false. Above logic wille be executed only when condition is true. If you want to send an email without attachment then you can steps to send email under the false condition. Here you do not have to list blobs and add attachments.
+
 
 
 
