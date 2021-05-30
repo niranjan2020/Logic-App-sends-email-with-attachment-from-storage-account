@@ -7,3 +7,5 @@ Here we will be crating azure logic application with http trigger which gets blo
 Lets see how we can start.
 
 1. Go to Azure Logic App > click on create > select subscription > select RG > Provide Logic App Name > LASendsEmail > select Region > Next Tags > Review and Create
+2. Go to Storage Account and create container as email and upload sample doccument
+3. Once login App is created 
